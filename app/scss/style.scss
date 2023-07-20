@@ -1,8 +1,63 @@
+@import "vars";
+@import "fonts";
 @import "reset";
 @import "global";
-@import "media";
-@import "vars";
 
+.header{
+    &__inner{
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.menu{
+    &__list{
+        display: flex;
+    }
+    &__item + &__item{
+        margin-left: 40px;
+    }
+    &__link{
+        color: $title-color;
+        @extend %Quicksand-400;
+        padding-bottom: 1px;
+        transition: all 0.7s ease;
+        &:hover{
+            color: $accent-color;
+            border-bottom: 1px solid $accent-color;
+            @extend %Quicksand-500;
+        }
+    }
+    &__link--active{
+        color: $accent-color;
+        border-bottom: 1px solid $accent-color;
+        @extend %Quicksand-500;
+    }
+}   
+.user-nav{
+    display: flex; 
+    &__link{
+        position: relative;
+    }
+    &__num{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $accent-color;
+        color: #fff;
+        top: -9px;
+        right: -9px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    &__link + &__link{
+        margin-left: 25px;
+    }
+
+}
 
 
 @import "media";
