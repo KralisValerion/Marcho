@@ -1,10 +1,21 @@
-body{
+body, a{
     color: $defoult-color;
+    font-size: 16px;
     @extend %Quicksand-400;
 }
 
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
 .container{
     margin: 0 auto;
     max-width: 1170px;
     padding: 0 15px;
+}
+
+.main{
+    flex-grow: 1;
 }
