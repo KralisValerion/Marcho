@@ -161,9 +161,8 @@
 .top-slider{
     background-color: $bg;
     padding-top: 60px;
-    &__inner{
-
-    }
+    
+    background: url('../img/slider/slider-bg.jpg') no-repeat center / cover;
     &__title{
         @extend %Roboto-700;
         color: $title-color;
