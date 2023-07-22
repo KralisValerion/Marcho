@@ -22,3 +22,12 @@ $bg: #f6f6f6;
     font-family: "Roboto-Regular", sans-serif;
     font-weight: 400;
 }
+
+%btn{
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $accent-color;
+    padding: 14px 35PX;
+    box-shadow: 0 7px 20px 0px rgba(255, 17, 48, 0.3);
+    @extend %Roboto-400;
+}

@@ -1,4 +1,5 @@
 @import "vars";
+@import "libs";
 @import "fonts";
 @import "reset";
 @import "global";
@@ -23,6 +24,7 @@
         @extend %Quicksand-400;
         padding-bottom: 1px;
         transition: all 0.7s ease;
+        padding: 0 2px 1px;
         &:hover{
             color: $accent-color;
             border-bottom: 1px solid $accent-color;
@@ -134,10 +136,9 @@
     }
     
     &__form-button{
-        padding: 15px;
-        background-color: $accent-color;
-        color:  #fff;
-        text-transform: uppercase;
+        @extend %btn;
+        @extend %Quicksand-400;
+        padding: 17px 15px 14px;
     }
 }
 .footer-bottom{
@@ -156,5 +157,84 @@
     }
 }
 
+
+.top-slider{
+    background-color: $bg;
+    padding-top: 60px;
+    &__inner{
+
+    }
+    &__title{
+        @extend %Roboto-700;
+        color: $title-color;
+        font-size: 58px;
+        line-height: 68px;
+        max-width: 670px;
+        margin-bottom: 35px;
+    }
+    &__text{
+        max-width: 470px;
+        margin-bottom: 65px;
+        font-size: 16px;
+    }
+    &__button{
+        @extend %btn;
+    }
+    &__container{
+        max-width: 1560px;
+    }
+    &__content{
+        margin-left: 171px;
+        padding-top: 125px;
+    }
+    &__img{
+        max-height: 630px;
+    }
+    &__item-inner{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .slick-dots{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 30px;
+        display: flex;
+        justify-content: center;
+        li{
+            padding: 0 5px;
+            button{
+                font-size: 0;
+                position: relative;
+                width: 27px;
+                height: 27px;
+                border: 1px solid  transparent;
+                border-radius: 50%;
+                background-color: transparent;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $defoult-color;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &.slick-active{
+                button{
+                    border-color: $accent-color;
+                    &::before{
+                        background-color: $accent-color;
+                    }
+                }
+            }
+        }
+    }
+
+}
 
 @import "media";
