@@ -19,3 +19,18 @@ body, a{
 .main{
     flex-grow: 1;
 }
+
+.title{
+    text-align: center;
+    font-size: 48px;
+    @extend %Roboto-700;
+    color: $title-color;
+    line-height: 56px;
+    margin-bottom: 10px;
+}
+.text{
+    text-align: center;
+    max-width: 570px;
+    margin: 0 auto 30px;
+    line-height: 25px;
+}
