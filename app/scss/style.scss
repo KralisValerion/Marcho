@@ -4,6 +4,7 @@
 @import "reset";
 @import "global";
 
+
 .header{
     &__inner{
         padding: 40px 0;
@@ -361,5 +362,58 @@
 
     }
 }
+
+.video-fashion{
+    background-color: $bg;
+    background-image: url('../img//decor/fashion-bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__popup{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin-right: 65px;
+        max-width: 530px;
+        height: 480px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position:  top center;
+        background-size:cover;
+    }
+    &__content{
+        max-width: 570px;
+        padding: 80px 0;
+        text-align: left;
+    }
+    &__play{
+        display: flex;
+    
+    }
+    
+    &__subtitle{
+        font-size: 22px;
+        color: $accent-color;
+        margin-bottom: 15px;
+        @extend %Roboto-700
+    }
+    &__title{
+        text-align: left;
+    }
+    &__text{
+        line-height: 22px;
+        margin-bottom: 50px;
+    }
+    &__link{
+        @extend %btn;
+    }
+}
+
 
 @import "media";
