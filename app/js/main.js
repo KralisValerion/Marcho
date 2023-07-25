@@ -5,6 +5,9 @@ $(function () {
         fade: true,
         autoplay: true,
         autoplaySpeed: 3000,
-    })
-
+    }),
+        $(".star").rateYo({
+            starWidth: "1px",
+            readOnly: true,
+        });
 })
