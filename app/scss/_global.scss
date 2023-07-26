@@ -16,6 +16,7 @@ body, a{
     padding: 0 15px;
 }
 
+
 .main{
     flex-grow: 1;
 }
@@ -33,4 +34,46 @@ body, a{
     max-width: 570px;
     margin: 0 auto 30px;
     line-height: 25px;
+}
+
+.breadcrumbs{
+    display: inline-flex;
+    justify-content: center;
+    padding-left: 25px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background: url('../img/icon/home.svg') no-repeat center / cover;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+    }
+    &__list{
+        display: flex;
+    }
+    &__item{
+        padding-right: 40px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            background: url('../img/icon/bcr-arrow.svg') no-repeat center / cover;
+            width: 9px;
+            height: 10px;
+            top: 3px;
+            right: 15px;
+        }
+        &:last-child{
+            padding-right: 0;
+            color: $accent-color;
+            &::after{
+                background: none;
+            }
+        }
+    }
+    &__link{
+        color: inherit;
+    }
 }
